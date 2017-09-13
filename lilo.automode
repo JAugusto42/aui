@@ -32,22 +32,22 @@
   #13) Fonts
   #14) Extra
   #15) Clean Orphan Packages
-  MAINMENU="1-13 15"
+  MAINMENU="1-3 13 15"
 #}}}
 #BASIC SETUP {{{
-  CUPS="y"
+  CUPS="n"
   CUSTOMREPO="n"         # Add custom repositories
-  FIRMWARE="y"           # Install custom firmwares
+  FIRMWARE="n"           # Install custom firmwares
   NFS="n"
-  READAHEAD="y"
-  SAMBA="y"
+  READAHEAD="n"
+  SAMBA="n"
   SSH="y"
-  TLP="n"                # Laptop Power Manager
-  ZRAM="y"
-  ZSH="y"
-  OH_MY_ZSH="y"
+  TLP="y"                # Laptop Power Manager
+  ZRAM="n"
+  ZSH="n"
+  OH_MY_ZSH="n"
   PROPRIETARY_DRIVER="n" # Proprietary (NVIDIA) driver
-  FONTCONFIG="y"
+  FONTCONFIG="n"
   #}}}
   #ADDITIONAL FIRMWARE {{{
     # 1) aic94xx-firmware
@@ -62,7 +62,7 @@
     #10) libffado [Firmware Audio Devices]
     #11) libmtp [Android Devices]
     #12) libraw1394 [IEE1394 Driver]
-    FIRMWARE_OPTIONS="11"
+    FIRMWARE_OPTIONS="1"
   #}}}
 #}}}
 #DESKTOP ENVIRONMENT|WINDOW MANAGER {{{
@@ -80,15 +80,7 @@
   #12) i3
   #13) OpenBox
   #14) Xmonad
-  DESKTOPENV=4
-  #KDE {{{
-    # 1) Choqok
-    # 2) Digikam
-    # 3) K3b
-    # 4) Skrooge
-    # 5) Yakuake
-    KDE_OPTIONS="1-5"
-  #}}}
+  DESKTOPENV=8
   #ESSENTIAL APPS [Enlightenment,LXDE,Awesome,Fluxbox,OpenBox] {{{
     # 1) Display Manager
     # 2) Dmenu
@@ -103,7 +95,7 @@
     #11) Xcompmgr
     #12) Zathura
     #13) speedtest-cli
-    MISCAPPS="1 3"
+    MISCAPPS="1 7 10 12"
   #}}}
   #DISPLAY MANAGER {{{
     # 1) Elsa
@@ -113,18 +105,6 @@
     # 5) Slim
     DISPLAY_MANAGER="3"
   #}}}
-  # 1) Icons Themes
-  # 2) GTK2|GTK3 Themes
-  THEMES_OPTIONS="1 2"
-  #ICONS THEMES {{{
-    # 1) Numix
-    ICONS_THEMES="1"
-  #}}}
-  #GTK THEMES {{{
-    # 1) Arc
-    GTK_THEMES="1"
-  #}}}
-#}}}
 #NETWORK MANAGER {{{
   # 1) NetworkManager
   # 2) Wicd
@@ -132,7 +112,7 @@
   # n) None
   NETWORKMANAGER=1
   #USB 3G MODEM SUPPORT
-  USBMODEM="y"
+  USBMODEM="n"
 #}}}
 #ACCESSORIES {{{
   # 1) Albert
@@ -148,199 +128,12 @@
   #11) Terminator
   ACCESSORIES_OPTIONS="10"
 #}}}
-#DEVELOPEMENT {{{
-  # 1) Atom
-  # 2) Emacs
-  # 3) Gvim
-  # 4) Meld
-  # 5) Sublime Text 2
-  # 6) Sublime Text 3
-  # 7) Android Studio
-  # 8) IntelliJ IDEA
-  # 9) Monodevelop
-  #10) QT Creator
-  #11) MySQL Workbench
-  #12) OpenJDK
-  #13) OracleJDK
-  #14) NodeJS
-  #15) Microsoft Visual Studio Code
-  DEVELOPMENT_OPTIONS="13"
-#}}}
-#OFFICE {{{
-  # 1) Abiword+Gnumeric|Calligra
-  # 2) Calibre
-  # 3) GCStar
-  # 4) Geeknote
-  # 5) Haroopad
-  # 6) Homebank
-  # 7) Impressive
-  # 8) Latex
-  # 9) LibreOffice
-  #10) OCRFeeder
-  #11) Xmind
-  OFFICE_OPTIONS="9"
-#}}}
-#SYSTEM TOOLS {{{
-  # 1) ClamAV
-  # 2) Cockpit
-  # 3) Docker
-  # 4) FirewallD
-  # 5) Gparted
-  # 6) Grsync
-  # 7) Hosts Update
-  # 8) Htop
-  # 9) Plex
-  #10) UFW
-  #11) Unified Remote
-  #12) Virtualbox
-  #13) Wine
-  SYSTEMTOOLS_OPTIONS="10"
-#}}}
-#GRAPHICS {{{
-  # 1) Blender
-  # 2) Gimp
-  # 3) Gthumb
-  # 4) Inkscape
-  # 5) MComix
-  # 6) Mypaint
-  # 7) Pencil
-  # 8) Scribus
-  # 9) Shotwell
-  #10) Simple Scan
-  GRAPHICS_OPTIONS="2-7 9"
-#}}}
-#INTERNET {{{
-  # 1) Browser
-  # 2) Download|Fileshare
-  # 3) Email|RSS
-  # 4) Instant Messaging|IRC
-  # 5) Mapping Tools
-  # 6) VNC|Desktop Share
-  INTERNET_OPTIONS="1-6"
-  #BROWSER {{{
-    # 1) Chrome
-    # 2) Chromium
-    # 3) Firefox
-    # 4) Midori|Konqueror
-    # 5) Opera
-    BROWSERS_OPTIONS="3"
-  #}}}
-  #DOWNLOAD|FILESHARE {{{
-    # 1) AeroFS
-    # 2) Resilio Sync
-    # 3) Deluge
-    # 4) Dropbox
-    # 5) FlareGet
-    # 6) Jdownloader
-    # 7) qBittorrent
-    # 8) Sparkleshare
-    # 9) Spider Oak
-    #10) Trasmission
-    #11) uGet
-    #12) youtube-dl
-    DOWNLOAD_OPTIONS=""
-  #}}}
-  #EMAIL|RSS {{{
-    # 1) Liferea
-    # 2) Thunderbird
-    EMAIL_OPTIONS=""
-  #}}}
-  #IM|IRC {{{
-    # 1) HexChat|Konversation
-    # 2) Irssi
-    # 3) Pidgin
-    # 4) Skype
-    # 5) Teamspeak
-    # 6) Viber
-    # 7) Telegram Desktop
-    # 8) qTox
-    IM_OPTIONS="4"
-  #}}}
-  #MAPPING {{{
-    # 1) Google Earth
-    # 2) NASA World Wind
-    MAPPING_OPTIONS=""
-  #}}}
-  #VNC|Desktop Share {{{
-    # 1) Remmina
-    # 2) Teamviewer
-    VNC_OPTIONS=""
-  #}}}
-#}}}
-#AUDIO {{{
-  # 1) Players
-  # 2) Editors|Tools
-  # 3) Codecs
-  AUDIO_OPTIONS="1-3"
-  #PLAYERS {{{
-    # 1) Amarok
-    # 2) Audacious
-    # 3) Banshee
-    # 4) Clementine
-    # 5) Deadbeef
-    # 6) Guayadeque
-    # 7) Musique
-    # 8) Nuvola
-    # 9) Pragha
-    #10) Radiotray
-    #11) Rhythmbox
-    #12) Spotify
-    #13) Timidity++
-    #14) Tomahawk
-    #15) quodlibet
-    AUDIO_PLAYER_OPTIONS="4"
-  #}}}
-  #EDITORS|TOOLS {{{
-    # 1) Audacity
-    # 2) Easytag
-    # 3) OcenAudio
-    # 4) Soundconverter|Soundkonverter
-    AUDIO_EDITOR_OPTIONS="2"
-  #}}}
-#}}}
-#VIDEO {{{
-  # 1) Players
-  # 2) Editors|Tools
-  # 3) Codecs
-  VIDEO_OPTIONS="1-3"
-  #PLAYERS {{{
-    # 1) Gnome Mplayer
-    # 2) LiveStreamer
-    # 3) Minitube
-    # 4) Miro
-    # 5) MPV
-    # 6) Parole
-    # 7) Popcorn Time
-    # 8) VLC
-    # 9) Kodi
-    VIDEO_PLAYER_OPTIONS="8"
-  #}}}
-  #EDITORS|TOOLS {{{
-    # 1) Arista
-    # 2) Avidemux
-    # 3) Filebot
-    # 4) Handbrake
-    # 5) Kazam
-    # 6) Kdenlive
-    # 7) Lightworks
-    # 8) Openshot
-    # 9) Pitivi
-    #10) Transmageddon
-    VIDEO_EDITOR_OPTIONS="1"
-  #}}}
-#}}}
-#GAMES {{{
-  #1) Desura
-  #2) PlayOnLinux
-  #3) Steam
-  GAMES_OPTIONS=""
-#}}}
 #WEBSERVER {{{
   # 1) LAMP - APACHE, MariaDB & PHP
   # 2) LAPP - APACHE, POSTGRESQL & PHP
   # 3) LEMP - NGINX, MariaDB & PHP
   # 4) LEPP - NGINX, POSTGRESQL & PHP
-  WEBSERVER=4
+  WEBSERVER=2
   POSTGIS="n"
 #}}}
 #FONTS {{{
